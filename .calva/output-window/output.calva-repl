@@ -35,7 +35,7 @@ You can configure this with the setting:
 ; 
 
 ; Starting Jack-in Terminal: pushd /Users/jash/dev/clojure-brave-and-true ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless ; popd
-; Using host:port 127.0.0.1:50708 ...
+; Using host:port 127.0.0.1:51245 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
@@ -46,20 +46,54 @@ about why stdout printed to this file is prepended with `;` to be line comments.
 clj꞉clojure-brave-and-true.core꞉> 
 ; Jack-in done.
 clj꞉clojure-brave-and-true.core꞉> 
-2
-clj꞉clojure-brave-and-true.core꞉> 
-2
-clj꞉clojure-brave-and-true.core꞉> 
-1
-clj꞉clojure-brave-and-true.core꞉> 
-#'clojure-brave-and-true.core/say-hi
-clj꞉clojure-brave-and-true.core꞉> 
-#'clojure-brave-and-true.core/say-hi
-clj꞉clojure-brave-and-true.core꞉> 
-#'clojure-brave-and-true.core/say-hi
-clj꞉clojure-brave-and-true.core꞉> 
-#'clojure-brave-and-true.core/say-hi
-clj꞉clojure-brave-and-true.core꞉> 
-"Hi, Josh"
-clj꞉clojure-brave-and-true.core꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; print something
+"returns this str after evaling stuff"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"truthy output"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"falsey output"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"truthy output"
+clj꞉clojure-brave-and-true.do-things꞉> 
+true
+clj꞉clojure-brave-and-true.do-things꞉> 
+false
+clj꞉clojure-brave-and-true.do-things꞉> 
+true
+clj꞉clojure-brave-and-true.do-things꞉> 
+true
+clj꞉clojure-brave-and-true.do-things꞉> 
 ; nREPL Connection was closed
