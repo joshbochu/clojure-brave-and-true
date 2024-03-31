@@ -1,52 +1,40 @@
-# Prerequisites
-*.d
+# Leiningen
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/lib/
+/classes/
+/target/
+/checkouts/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Logs
+*.log
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Local development
+.nrepl-port
+.cpcache/
+.repl/
+.repl-history
+*.repl
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+/.lein-*
+/.nrepl-port
 
-# Precompiled Headers
-*.gch
-*.pch
+# Operating System specific
+.DS_Store
+Thumbs.db
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Profiles and private files
+profiles.clj
+profiles.cljs
