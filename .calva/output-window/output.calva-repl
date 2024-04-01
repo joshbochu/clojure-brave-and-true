@@ -35,7 +35,7 @@ You can configure this with the setting:
 ; 
 
 ; Starting Jack-in Terminal: pushd /Users/jash/dev/clojure-brave-and-true ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless ; popd
-; Using host:port 127.0.0.1:51245 ...
+; Using host:port 127.0.0.1:49375 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
@@ -46,54 +46,138 @@ about why stdout printed to this file is prepended with `;` to be line comments.
 clj꞉clojure-brave-and-true.core꞉> 
 ; Jack-in done.
 clj꞉clojure-brave-and-true.core꞉> 
-; print something
-"returns this str after evaling stuff"
+"return this"
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+nil
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+"return this"
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+nil
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+#'clojure-brave-and-true.do-things/some-name
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+["a" "b" "c"]
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+{:name {:first "john"}}
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+{:first "john"}
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+nil
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+nil
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+nil
 clj꞉clojure-brave-and-true.do-things꞉> 
-; print something
-"returns this str after evaling stuff"
+:first
 clj꞉clojure-brave-and-true.do-things꞉> 
-"truthy output"
+[:name :first]
 clj꞉clojure-brave-and-true.do-things꞉> 
-"falsey output"
+"john"
 clj꞉clojure-brave-and-true.do-things꞉> 
-"truthy output"
+{:first "john"}
 clj꞉clojure-brave-and-true.do-things꞉> 
-true
+"default"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:1:8205).
+; Unable to resolve symbol: d in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:65:1).
+; Unable to resolve symbol: d in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:65:1).
+; Unable to resolve symbol: d in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Execution error (ArityException) at clojure-brave-and-true.do-things/eval8079 (form-init2895711614470634293.clj:65).
+; Wrong number of args (0) passed to: :d
+clj꞉clojure-brave-and-true.do-things꞉> 
+"default"
+clj꞉clojure-brave-and-true.do-things꞉> 
+{:first "john"}
+clj꞉clojure-brave-and-true.do-things꞉> 
+{:first "john"}
+clj꞉clojure-brave-and-true.do-things꞉> 
+{:first "john"}
+clj꞉clojure-brave-and-true.do-things꞉> 
+{:first "john"}
+clj꞉clojure-brave-and-true.do-things꞉> 
+nil
+clj꞉clojure-brave-and-true.do-things꞉> 
+0
+clj꞉clojure-brave-and-true.do-things꞉> 
+{:name "josh", :age 100}
+clj꞉clojure-brave-and-true.do-things꞉> 
+0
+clj꞉clojure-brave-and-true.do-things꞉> 
+[0 1 2]
+clj꞉clojure-brave-and-true.do-things꞉> 
+[0 1 2 3]
+clj꞉clojure-brave-and-true.do-things꞉> 
+(1 2 3 4)
+clj꞉clojure-brave-and-true.do-things꞉> 
+(1 2 3 4)
+clj꞉clojure-brave-and-true.do-things꞉> 
+:c
+clj꞉clojure-brave-and-true.do-things꞉> 
+:a
+clj꞉clojure-brave-and-true.do-things꞉> 
+(4 1 2 3)
+clj꞉clojure-brave-and-true.do-things꞉> 
+0
+clj꞉clojure-brave-and-true.do-things꞉> 
+(0 1 2 3)
+clj꞉clojure-brave-and-true.do-things꞉> 
+#{1 {:three 3} "2"}
+clj꞉clojure-brave-and-true.do-things꞉> 
+#{1 4 3 2 5}
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:86:1).
+; Unable to resolve symbol: k in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+#{1 {:three 3} "2"}
+clj꞉clojure-brave-and-true.do-things꞉> 
+#{1 4 3 2 5}
+clj꞉clojure-brave-and-true.do-things꞉> 
+{:a :b}
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Execution error (IllegalArgumentException) at clojure-brave-and-true.do-things/eval8126 (form-init2895711614470634293.clj:88).
+; Don't know how to create ISeq from: clojure.lang.Keyword
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Execution error (IllegalArgumentException) at clojure-brave-and-true.do-things/eval8128 (form-init2895711614470634293.clj:88).
+; Don't know how to create ISeq from: clojure.lang.Keyword
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Execution error (IllegalArgumentException) at clojure-brave-and-true.do-things/eval8130 (form-init2895711614470634293.clj:88).
+; Don't know how to create ISeq from: clojure.lang.Keyword
+clj꞉clojure-brave-and-true.do-things꞉> 
+#{:b :a}
+clj꞉clojure-brave-and-true.do-things꞉> 
+#{:b :a}
+clj꞉clojure-brave-and-true.do-things꞉> 
+#{1 3 2}
+clj꞉clojure-brave-and-true.do-things꞉> 
+#{1 3 2}
 clj꞉clojure-brave-and-true.do-things꞉> 
 false
 clj꞉clojure-brave-and-true.do-things꞉> 
 true
 clj꞉clojure-brave-and-true.do-things꞉> 
-true
+false
+clj꞉clojure-brave-and-true.do-things꞉> 
+#{:b :a}
+clj꞉clojure-brave-and-true.do-things꞉> 
+:a
+clj꞉clojure-brave-and-true.do-things꞉> 
+:a
+clj꞉clojure-brave-and-true.do-things꞉> 
+:a
+clj꞉clojure-brave-and-true.do-things꞉> 
+:a
+clj꞉clojure-brave-and-true.do-things꞉> 
+:a
+clj꞉clojure-brave-and-true.do-things꞉> 
+:a
+clj꞉clojure-brave-and-true.do-things꞉> 
+nil
+clj꞉clojure-brave-and-true.do-things꞉> 
+nil
 clj꞉clojure-brave-and-true.do-things꞉> 
 ; nREPL Connection was closed
