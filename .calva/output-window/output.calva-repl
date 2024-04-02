@@ -35,7 +35,7 @@ You can configure this with the setting:
 ; 
 
 ; Starting Jack-in Terminal: pushd /Users/jash/dev/clojure-brave-and-true ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless ; popd
-; Using host:port 127.0.0.1:49375 ...
+; Using host:port 127.0.0.1:56253 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
@@ -46,138 +46,339 @@ about why stdout printed to this file is prepended with `;` to be line comments.
 clj꞉clojure-brave-and-true.core꞉> 
 ; Jack-in done.
 clj꞉clojure-brave-and-true.core꞉> 
-"return this"
-clj꞉clojure-brave-and-true.do-things꞉> 
 nil
 clj꞉clojure-brave-and-true.do-things꞉> 
-"return this"
+:dne
 clj꞉clojure-brave-and-true.do-things꞉> 
-nil
+#function[clojure.core/+]
 clj꞉clojure-brave-and-true.do-things꞉> 
-#'clojure-brave-and-true.do-things/some-name
-clj꞉clojure-brave-and-true.do-things꞉> 
-["a" "b" "c"]
-clj꞉clojure-brave-and-true.do-things꞉> 
-{:name {:first "john"}}
-clj꞉clojure-brave-and-true.do-things꞉> 
-{:first "john"}
-clj꞉clojure-brave-and-true.do-things꞉> 
-nil
-clj꞉clojure-brave-and-true.do-things꞉> 
-nil
-clj꞉clojure-brave-and-true.do-things꞉> 
-nil
-clj꞉clojure-brave-and-true.do-things꞉> 
-:first
-clj꞉clojure-brave-and-true.do-things꞉> 
-[:name :first]
-clj꞉clojure-brave-and-true.do-things꞉> 
-"john"
-clj꞉clojure-brave-and-true.do-things꞉> 
-{:first "john"}
-clj꞉clojure-brave-and-true.do-things꞉> 
-"default"
-clj꞉clojure-brave-and-true.do-things꞉> 
-; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:1:8205).
-; Unable to resolve symbol: d in this context
-clj꞉clojure-brave-and-true.do-things꞉> 
-; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:65:1).
-; Unable to resolve symbol: d in this context
-clj꞉clojure-brave-and-true.do-things꞉> 
-; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:65:1).
-; Unable to resolve symbol: d in this context
-clj꞉clojure-brave-and-true.do-things꞉> 
-; Execution error (ArityException) at clojure-brave-and-true.do-things/eval8079 (form-init2895711614470634293.clj:65).
-; Wrong number of args (0) passed to: :d
-clj꞉clojure-brave-and-true.do-things꞉> 
-"default"
-clj꞉clojure-brave-and-true.do-things꞉> 
-{:first "john"}
-clj꞉clojure-brave-and-true.do-things꞉> 
-{:first "john"}
-clj꞉clojure-brave-and-true.do-things꞉> 
-{:first "john"}
-clj꞉clojure-brave-and-true.do-things꞉> 
-{:first "john"}
-clj꞉clojure-brave-and-true.do-things꞉> 
-nil
-clj꞉clojure-brave-and-true.do-things꞉> 
-0
-clj꞉clojure-brave-and-true.do-things꞉> 
-{:name "josh", :age 100}
-clj꞉clojure-brave-and-true.do-things꞉> 
-0
-clj꞉clojure-brave-and-true.do-things꞉> 
-[0 1 2]
-clj꞉clojure-brave-and-true.do-things꞉> 
-[0 1 2 3]
-clj꞉clojure-brave-and-true.do-things꞉> 
-(1 2 3 4)
-clj꞉clojure-brave-and-true.do-things꞉> 
-(1 2 3 4)
-clj꞉clojure-brave-and-true.do-things꞉> 
-:c
-clj꞉clojure-brave-and-true.do-things꞉> 
-:a
-clj꞉clojure-brave-and-true.do-things꞉> 
-(4 1 2 3)
-clj꞉clojure-brave-and-true.do-things꞉> 
-0
-clj꞉clojure-brave-and-true.do-things꞉> 
-(0 1 2 3)
-clj꞉clojure-brave-and-true.do-things꞉> 
-#{1 {:three 3} "2"}
-clj꞉clojure-brave-and-true.do-things꞉> 
-#{1 4 3 2 5}
-clj꞉clojure-brave-and-true.do-things꞉> 
-; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:86:1).
-; Unable to resolve symbol: k in this context
-clj꞉clojure-brave-and-true.do-things꞉> 
-#{1 {:three 3} "2"}
-clj꞉clojure-brave-and-true.do-things꞉> 
-#{1 4 3 2 5}
-clj꞉clojure-brave-and-true.do-things꞉> 
-{:a :b}
-clj꞉clojure-brave-and-true.do-things꞉> 
-; Execution error (IllegalArgumentException) at clojure-brave-and-true.do-things/eval8126 (form-init2895711614470634293.clj:88).
-; Don't know how to create ISeq from: clojure.lang.Keyword
-clj꞉clojure-brave-and-true.do-things꞉> 
-; Execution error (IllegalArgumentException) at clojure-brave-and-true.do-things/eval8128 (form-init2895711614470634293.clj:88).
-; Don't know how to create ISeq from: clojure.lang.Keyword
-clj꞉clojure-brave-and-true.do-things꞉> 
-; Execution error (IllegalArgumentException) at clojure-brave-and-true.do-things/eval8130 (form-init2895711614470634293.clj:88).
-; Don't know how to create ISeq from: clojure.lang.Keyword
-clj꞉clojure-brave-and-true.do-things꞉> 
-#{:b :a}
-clj꞉clojure-brave-and-true.do-things꞉> 
-#{:b :a}
-clj꞉clojure-brave-and-true.do-things꞉> 
-#{1 3 2}
-clj꞉clojure-brave-and-true.do-things꞉> 
-#{1 3 2}
-clj꞉clojure-brave-and-true.do-things꞉> 
-false
+3
 clj꞉clojure-brave-and-true.do-things꞉> 
 true
 clj꞉clojure-brave-and-true.do-things꞉> 
-false
+6
 clj꞉clojure-brave-and-true.do-things꞉> 
-#{:b :a}
+1
 clj꞉clojure-brave-and-true.do-things꞉> 
-:a
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:1:8206).
+; Can't take value of a macro: #'clojure.core/and
 clj꞉clojure-brave-and-true.do-things꞉> 
-:a
+#function[clojure.core/+]
 clj꞉clojure-brave-and-true.do-things꞉> 
-:a
+#function[clojure.core/+]
 clj꞉clojure-brave-and-true.do-things꞉> 
-:a
+#function[clojure.core/+]
 clj꞉clojure-brave-and-true.do-things꞉> 
-:a
+true
 clj꞉clojure-brave-and-true.do-things꞉> 
-:a
+6
 clj꞉clojure-brave-and-true.do-things꞉> 
+6
+clj꞉clojure-brave-and-true.do-things꞉> 
+#function[clojure.core/+]
+clj꞉clojure-brave-and-true.do-things꞉> 
+0
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Execution error (ClassCastException) at clojure-brave-and-true.do-things/eval8057 (form-init12396128738050718248.clj:110).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojure-brave-and-true.do-things꞉> 
+2
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Error printing return value (IllegalArgumentException) at clojure.lang.RT/seqFrom (RT.java:557).
+; Don't know how to create ISeq from: java.lang.Long
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Execution error (ClassCastException) at clojure-brave-and-true.do-things/eval8063 (form-init12396128738050718248.clj:117).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojure-brave-and-true.do-things꞉> 
+(2 3 4 5)
+clj꞉clojure-brave-and-true.do-things꞉> 
+(2 3 4 5)
+clj꞉clojure-brave-and-true.do-things꞉> 
+(2 3 4 5)
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:120:1).
+; Unable to resolve symbol: my-incr in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:120:1).
+; Unable to resolve symbol: my-incr in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:120:1).
+; Unable to resolve symbol: my-incr in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:120:1).
+; Unable to resolve symbol: my-incr in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/my-incr
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Execution error (ClassCastException) at clojure-brave-and-true.do-things/my-incr (form-init12396128738050718248.clj:119).
+; class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉clojure-brave-and-true.do-things꞉> 
+(2 3 4 5)
+clj꞉clojure-brave-and-true.do-things꞉> 
+"\n\n  \n  \n  "
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/my-incr
+clj꞉clojure-brave-and-true.do-things꞉> 
+3
+clj꞉clojure-brave-and-true.do-things꞉> 
+(2 3 4)
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:153:1).
+; Unable to resolve symbol: two-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:152:1).
+; Unable to resolve symbol: one-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:152:1).
+; Unable to resolve symbol: one-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:152:1).
+; Unable to resolve symbol: zero-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:152:1).
+; Unable to resolve symbol: zero-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:152:1).
+; Unable to resolve symbol: zero-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:150:1).
+; Unable to resolve symbol: zero-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/zero-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+"this is a zero arity fn"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/zero-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+"this is a zero arity fn"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/one-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/one-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:158:1).
+; Unable to resolve symbol: two-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+" this is a one arity fn!yooo"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:159:1).
+; Unable to resolve symbol: two-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:159:1).
+; Unable to resolve symbol: two-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:159:1).
+; Unable to resolve symbol: two-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+" this is a one arity fn!yooo"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/zero-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+"this is a zero arity fn"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:162:1).
+; Unable to resolve symbol: two-params in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:162:1).
+; Unable to resolve symbol: two-params in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:162:1).
+; Unable to resolve symbol: two-params in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:162:1).
+; Unable to resolve symbol: two-params in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:162:1).
+; Unable to resolve symbol: print-params in this context
+clj꞉user꞉> 
+"World"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:161:1).
+; Unable to resolve symbol: print-params in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:161:10).
+; Unable to resolve symbol: print-params in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:161:10).
+; Unable to resolve symbol: print-params in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:162:10).
+; Unable to resolve symbol: print-params in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/print-params
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/print-params
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/print-params
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/print-params
+clj꞉clojure-brave-and-true.do-things꞉> 
+; heyHelloWorld
 nil
 clj꞉clojure-brave-and-true.do-things꞉> 
+; heyHelloWorld
 nil
 clj꞉clojure-brave-and-true.do-things꞉> 
-; nREPL Connection was closed
+; heyHelloWorld
+nil
+clj꞉clojure-brave-and-true.do-things꞉> 
+; heyHelloWorld
+nil
+clj꞉clojure-brave-and-true.do-things꞉> 
+; heyHelloWorld
+nil
+clj꞉clojure-brave-and-true.do-things꞉> 
+; heyHelloWorld
+nil
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/print-params
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/print-params
+clj꞉clojure-brave-and-true.do-things꞉> 
+"heyHelloWorld"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"heyHelloWorld"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:1:8206).
+; Unable to resolve symbol: two-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/two-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+"heyHelloWorld"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/two-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/multi-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+"1"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"12"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"123"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"12"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"1"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"123"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Execution error (ArityException) at clojure-brave-and-true.do-things/eval8171 (form-init12396128738050718248.clj:171).
+; Wrong number of args (0) passed to: clojure-brave-and-true.do-things/multi-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/multi-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+"you passed no args my dude"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"you passed no args my dude"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"you passed no args my dude"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/multi-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/multi-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+"this is a zero arity fn"
+clj꞉clojure-brave-and-true.do-things꞉> 
+" this is a one arity fn!1"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"hey12"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/arity-overloader
+clj꞉clojure-brave-and-true.do-things꞉> 
+"12"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"---DEFAULT"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:186:1).
+; Unable to resolve symbol: do-diff-stuff-arity in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/do-diff-stuff-arity
+clj꞉clojure-brave-and-true.do-things꞉> 
+"yoo return this str"
+clj꞉clojure-brave-and-true.do-things꞉> 
+2
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:203:2).
+; Unable to resolve symbol: add-one in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/add-one
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/add-one-to-all
+clj꞉clojure-brave-and-true.do-things꞉> 
+2
+clj꞉clojure-brave-and-true.do-things꞉> 
+(2 2 2 3 3 3)
+clj꞉clojure-brave-and-true.do-things꞉> 
+(2 2 2 3 3 3)
+clj꞉clojure-brave-and-true.do-things꞉> 
+(2 2 6 6 6)
+clj꞉clojure-brave-and-true.do-things꞉> 
+(2 2 6 6 6)
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/favs
+clj꞉clojure-brave-and-true.do-things꞉> 
+"my name is: josh and these are my fav things: (\"coffe\" \"chocolate\" \"lisp\")"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"my name is: josh and these are my fav things: (\"coffe\" \"chocolate\" \"lisp\")"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"my name is: josh and these are my fav things: (\"coffe\" \"chocolate\" \"lisp\")"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/favs
+clj꞉clojure-brave-and-true.do-things꞉> 
+"my name is: josh and these are my fav things: coffe, chocolate, lisp"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"my name is: josh and these are my fav things: coffee, chocolate, lisp"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-stuff
+clj꞉clojure-brave-and-true.do-things꞉> 
+"helloworld"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"hello"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-stuff
+clj꞉clojure-brave-and-true.do-things꞉> 
+"hello"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-stuff
+clj꞉clojure-brave-and-true.do-things꞉> 
+"hello"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"hello world"
+clj꞉clojure-brave-and-true.do-things꞉> 
+"helloworld"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-stuff
+clj꞉clojure-brave-and-true.do-things꞉> 
+"helloworld(\"blah1\" \"blah2\" \"blah3\")"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-stuff
+clj꞉clojure-brave-and-true.do-things꞉> 
+"helloworldblah1blah2blah3"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error compiling at (src/clojure_brave_and_true/do_things.clj:228:1).
+; Unable to resolve symbol: destructure-stuff-map in this context
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-stuff-map
+clj꞉clojure-brave-and-true.do-things꞉> 
+"helloworld"
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error reading source at (REPL:233:33).
+; Invalid token: b:
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-by-key
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-by-key
+clj꞉clojure-brave-and-true.do-things꞉> 
+; Syntax error reading source at (REPL:233:33).
+; Invalid token: b:
+clj꞉clojure-brave-and-true.do-things꞉> 
+"heyyou"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-by-key
+clj꞉clojure-brave-and-true.do-things꞉> 
+"heyyou"
+clj꞉clojure-brave-and-true.do-things꞉> 
+#'clojure-brave-and-true.do-things/destructure-by-key
+clj꞉clojure-brave-and-true.do-things꞉> 
+"use whole map for something: hey"
+clj꞉clojure-brave-and-true.do-things꞉> 
